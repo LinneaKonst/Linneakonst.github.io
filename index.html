@@ -4,31 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linnea Portfolio</title>
-    <link rel="icon" href="favicon.png" type="image/png"> <!-- Favicon -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png"> <!-- Byt ut mot din ikon -->
+</head>
+<body>
+    <!-- Navigationsmeny -->
+    <nav>
+        <div class="logo"> <img src="logo.png" alt="Logga"> </div>
+        <ul>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Bildgalleri -->
+    <section id="portfolio">
+        <h1>Mitt Galleri</h1>
+        <div class="gallery">
+            <img src="bild1.jpg" alt="Porträtt 1">
+            <img src="bild2.jpg" alt="Porträtt 2">
+            <img src="bild3.jpg" alt="Akvarellmålning">
+            <!-- Lägg till fler bilder här -->
+        </div>
+    </section>
+    
+    <!-- Kontaktformulär -->
+    <section id="contact">
+        <h1>Kontakta mig</h1>
+        <form action="DIN_BASIN_URL" method="POST" enctype="multipart/form-data">
+            <label for="name">Namn:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Din e-post:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subject">Ämne:</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="message">Vad söker du?</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <label for="file">Ladda upp en referensbild (valfritt, max 2MB):</label>
+            <input type="file" id="file" name="file">
+            
+            <button type="submit">Skicka</button>
+        </form>
+    </section>
+    
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: white;
-            color: black;
-        }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background: #333; color: white; }
+        nav .logo img { height: 50px; }
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: white; text-decoration: none; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; padding: 20px; }
+        .gallery img { width: 100%; border-radius: 5px; }
+        form { display: flex; flex-direction: column; max-width: 500px; margin: auto; }
+        form input, form textarea { margin-bottom: 10px; padding: 8px; }
+        form button { background: #333; color: white; padding: 10px; border: none; cursor: pointer; }
+    </style>
+</body>
+</html>
 
-        /* Navigationsmeny */
-        .navbar {
-            background-color: black;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 40px; /* Anpassa*
 
 
