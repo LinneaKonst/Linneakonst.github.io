@@ -1,0 +1,47 @@
+/* Grundläggande reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  justify-content: center; /* Centrerar innehållet horisontellt */
+  align-items: center; /* Centrerar innehållet vertikalt */
+  height: 100vh; /* Gör så att body tar hela höjden */
+  text-align: center; /* Centrerar texten */
+  flex-direction: column; /* Gör så att elementen är staplade vertikalt */
+}
+
+/* För rubriker */
+h1, h2, h3 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2rem;
+}
+
+/* För innehåll och bilder */
+.main-content {
+  width: 90%; /* Du kan justera den här bredden som du vill */
+  max-width: 1200px; /* Max bredd för att förhindra att sidan blir för bred på stora skärmar */
+}
+
+/* För bilder i grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
